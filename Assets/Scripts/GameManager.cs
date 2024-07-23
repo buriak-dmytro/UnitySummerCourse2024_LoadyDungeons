@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private string m_LogoAddress;
+    private AssetReference m_LogoAssetReference;
 
     private AsyncOperationHandle<Sprite> m_LogoLoadOpHandle;
 
@@ -39,8 +39,13 @@ public class GameManager : MonoBehaviour
         // When we go to the 
         s_CurrentLevel = 0;
 
-        m_LogoLoadOpHandle = 
-            Addressables.LoadAssetAsync<Sprite>(m_LogoAddress);
+        if (!m_LogoAssetReference.RuntimeKeyIsValid())
+        {
+            return;
+        }
+
+        m_LogoLoadOpHandle =
+            Addressables.LoadAssetAsync<Sprite>(m_LogoAssetReference);
 
         m_LogoLoadOpHandle.Completed += OnLogoLoadComplete;
     }
