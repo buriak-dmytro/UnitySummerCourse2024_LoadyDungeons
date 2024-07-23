@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private AssetReference m_LogoAssetReference;
+    private AssetReferenceSprite m_LogoAssetReference;
 
     private AsyncOperationHandle<Sprite> m_LogoLoadOpHandle;
 
