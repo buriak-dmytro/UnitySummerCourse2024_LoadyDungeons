@@ -130,11 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c684d12b3107504a9bb5142f4b14364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HatAssetReference:
-    m_AssetGUID: 6e65281e8a345ff4ea1b73f2a1578a6d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   m_HatAnchor: {fileID: 1946178409}
 --- !u!114 &8083381679980500539
 MonoBehaviour:

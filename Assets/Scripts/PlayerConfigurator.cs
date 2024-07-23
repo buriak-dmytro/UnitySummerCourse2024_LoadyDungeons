@@ -5,8 +5,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 // Used for the Hat selection logic
 public class PlayerConfigurator : MonoBehaviour
 {
-    [SerializeField]
-    private AssetReferenceGameObject m_HatAssetReference;
+    private GameObject m_HatInstance;
 
     [SerializeField]
     private Transform m_HatAnchor;
@@ -14,20 +13,29 @@ public class PlayerConfigurator : MonoBehaviour
     private AsyncOperationHandle<GameObject> m_HatLoadOpHandle;
 
     void Start()
-    {           
-        SetHat(string.Format("Hat{0:00}", GameManager.s_ActiveHat));
+    {
+        LoadInRandomHat();
     }
 
-    public void SetHat(string hatKey)
+    void Update()
     {
-        if (!m_HatAssetReference.RuntimeKeyIsValid())
+        if (Input.GetMouseButton(1))
         {
-            return;
+            Destroy(m_HatInstance);
+            Addressables.ReleaseInstance(m_HatLoadOpHandle);
+
+            LoadInRandomHat();
         }
+    }
 
-        m_HatLoadOpHandle = 
-            m_HatAssetReference.LoadAssetAsync<GameObject>();
+    private void LoadInRandomHat()
+    {
+        int randomIndex = Random.Range(0, 6);
+        string hatAddress = 
+            string.Format("Hat{0:00}", randomIndex);
 
+        m_HatLoadOpHandle =
+            Addressables.LoadAssetAsync<GameObject>(hatAddress);
         m_HatLoadOpHandle.Completed += OnHatLoadComplete;
     }
 
@@ -36,7 +44,10 @@ public class PlayerConfigurator : MonoBehaviour
     {
         if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
         {
-            Instantiate(asyncOperationHandle.Result, m_HatAnchor);
+            m_HatInstance = 
+                Instantiate(
+                    asyncOperationHandle.Result,
+                    m_HatAnchor);
         }
     }
 

@@ -23,7 +23,7 @@ public class Loading : MonoBehaviour
     private IEnumerator LoadNextLevel(string level)
     {
         m_SceneLoadOpHandler =
-            Addressables.LoadSceneAsync(level, activateOnLoad: false);
+            Addressables.LoadSceneAsync(level, activateOnLoad: true);
 
         while (!m_SceneLoadOpHandler.IsDone)
         {
