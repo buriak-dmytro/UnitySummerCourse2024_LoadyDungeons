@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class PlayerConfigurator : MonoBehaviour
 {
     [SerializeField]
-    private AssetReference m_HatAssetReference;
+    private AssetReferenceGameObject m_HatAssetReference;
 
     [SerializeField]
     private Transform m_HatAnchor;
