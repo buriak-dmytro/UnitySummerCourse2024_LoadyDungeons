@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Levels
   m_EditorClassIdentifier: 
-  m_GroupName: Leveks
+  m_GroupName: Levels
   m_Data:
     m_SerializedData: []
   m_GUID: e981df5cd64e88a468a103259ced0a43
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 03d0fe3f4c117ad4ba958794ccfc3ac6
+    m_Address: Level_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29c1d8c3070b4e441ab2c21e14128a7b
+    m_Address: Level_03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e40f8e5164d7a3b49a53720406e42408
+    m_Address: Level_02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 952b5b04d0205ba4084c9256369178ae
+    m_Address: Level_01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7554b18db3b335b4da1ca6ff65374ac9
+    m_Address: Level_00
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 033e657c3edcfe4468b0d9f2f4015d08, type: 2}
   m_SchemaSet:
