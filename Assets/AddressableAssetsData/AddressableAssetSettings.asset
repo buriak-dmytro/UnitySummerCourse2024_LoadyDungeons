@@ -46,6 +46,9 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 46cbaf59f61534b40a4f9234106b1990, type: 2}
   - {fileID: 11400000, guid: 90a916e1f5c32e546a7d63cc4ec54b3a, type: 2}
+  - {fileID: 11400000, guid: a8899ea8984cdc64aa51fb1b9800d326, type: 2}
+  - {fileID: 11400000, guid: 6a06c92627a44ae4895154a258453d37, type: 2}
+  - {fileID: 11400000, guid: fbc591f053a55d748aa89ecd7f84424c, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -143,6 +146,8 @@ MonoBehaviour:
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: fca8386c70c1e384db0d66320511a088, type: 2}
+  - {fileID: 11400000, guid: a1f5235851ecb68418dea424fed969ec, type: 2}
+  - {fileID: 11400000, guid: 4bdbbd06f46982c4e9f5f89a65631fce, type: 2}
   m_InitializationObjects: []
   m_CertificateHandlerType:
     m_AssemblyName: 
